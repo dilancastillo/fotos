@@ -29,11 +29,6 @@ if (file_exists($target_file)) {
     $errors[]="Lo sentimos, archivo ya existe.";
     $uploadOk = 0;
 }
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 524288) {
-    $errors[]= "Lo sentimos, el archivo es demasiado grande.  Tamaño máximo admitido: 0.5 MB";
-    $uploadOk = 0;
-}
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {

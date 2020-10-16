@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["titulo"])){
 	 $orden = intval($_POST['orden']);
 	 $estado = intval($_POST['estado']);
 	 $id_cocina=intval($_POST['id_cocina']);
-	 $sql="UPDATE cocina SET titulo='$titulo', orden='$orden', estado='$estado', color='$color', categoria='$categoria', marca='$marca' WHERE id='$id_cocina'";
+	 $sql="UPDATE cocina SET titulo='$titulo', color='$color', categoria='$categoria', marca='$marca', orden='$orden', estado='$estado' WHERE id='$id_cocina'";
 	 $query = mysqli_query($con,$sql);
 	// if user has been added successfully
 	if ($query) {

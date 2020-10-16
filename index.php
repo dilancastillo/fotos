@@ -17,8 +17,8 @@
     <!-- Navegación principal -->
     <header>
         <!-- Barra de navegación -->
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-            <a class="navbar-brand font-weight-bold" href="./index.html"><img src="./img/logo.png" class="img-fluid w-25 h-25"></a>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color: #efefef;">
+            <a class="navbar-brand font-weight-bold" href="./index.php"><img src="./img/logo.png" class="img-fluid w-25 h-25"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,6 +38,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-3" href="./cocinas.php">Cocinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-3" href="./colecciones.php">Catálogos</a>
                     </li>
                 </ul>
             </div>

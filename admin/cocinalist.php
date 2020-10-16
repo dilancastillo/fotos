@@ -4,63 +4,30 @@ $title = "Galería de cocinas";
 include("../conexion.php");
 $active_config = "active";
 $active_cocina = "active";
-
+include("top_menu.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="../images/ico/favicon.ico">
-	<title><?php echo $title; ?></title>
-	<!-- Bootstrap core CSS -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<!-- Custom styles for this template -->
-	<link href="css/navbar-fixed-top.css" rel="stylesheet">
-</head>
-
-<body>
-	<?php include("top_menu.php"); ?>
-
-	<div class="container">
-
-		<!-- Main component for a primary marketing message or call to action -->
-		<div class="row">
-
-			<ol class="breadcrumb">
-				<li><a href="#">Inicio</a></li>
-				<li class="active">Cocinas</li>
+<div class="container">
+	<div class="row">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb" style="margin-top: 90px;">
+				<li class="breadcrumb-item"><a href="#">Inicio</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Cocinas</li>
 			</ol>
-			<div class="row">
-				<div class="col-xs-12 text-right">
-					<a href='cocinaadd.php' class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Agregar Cocina</a>
-				</div>
-
+		</nav>
+		<div class="row mx-2">
+			<div class="col-xs-12 text-right" style="margin-top: 90px;">
+				<a href='cocinaadd.php' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Agregar Cocina</a>
 			</div>
-
-			<br>
-			<div id="loader" class="text-center"><span><img src="./img/ajax-loader.gif"></span></div>
-			<div class="outer_div"></div><!-- Datos ajax Final -->
-
 		</div>
+		<br>
+		<div id="loader" class="text-center"><span><img src="./img/ajax-loader.gif"></span></div>
+		<div class="outer_div"></div><!-- Datos ajax Final -->
+	</div>
+</div> <!-- /container -->
 
-	</div> <!-- /container -->
-	<?php include("footer.php"); ?>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+<?php include("footer.php"); ?>
 
-</html>
 <script>
 	$(document).ready(function() {
 		load(1);

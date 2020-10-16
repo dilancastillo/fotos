@@ -71,13 +71,12 @@ if ($action == 'ajax') {
 
 			?>
 
-				<div class="col-sm-6 col-md-3">
-					<div class="thumbnail">
-						<img src="../img/banner/<?php echo $url_image; ?>" alt="...">
-						<div class="caption">
-							<h3><?php echo $titulo; ?></h3>
-
-							<p class='text-right'><a href="cocinaedit.php?id=<?php echo intval($id_slide); ?>" class="btn btn-info" role="button"><i class='glyphicon glyphicon-edit'></i> Editar</a> <button type="button" class="btn btn-danger" onclick="eliminar_slide('<?php echo $id_slide; ?>');" role="button"><i class='glyphicon glyphicon-trash'></i> Eliminar</button></p>
+				<div class="col-md-4">
+					<div class="card mb-5">
+						<img src="../img/banner/<?php echo $url_image; ?>" class="card-img-top">
+						<div class="card-body text-center">
+							<h5 class="card-title text-center"><?php echo $titulo; ?></h5>
+							<a href="cocinaedit.php?id=<?php echo intval($id_slide); ?>" class="btn btn-info" role="button">Editar</a> <button type="button" class="btn btn-danger" onclick="eliminar_slide('<?php echo $id_slide; ?>');" role="button">Eliminar</button>
 						</div>
 					</div>
 				</div>
