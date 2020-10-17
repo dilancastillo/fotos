@@ -2,19 +2,6 @@
 include_once('header.php');
 ?>
 
-<style type="text/css">
-    .ui-autocomplete-row {
-        padding: 8px;
-        background-color: #f4f4f4;
-        border-bottom: 1px solid #ccc;
-        font-weight: bold;
-    }
-
-    .ui-autocomplete-row:hover {
-        background-color: #ddd;
-    }
-</style>
-
 <header>
     <nav class="navbar navbar-expand-lg navbar-light border-bottom mb-5" style="background-color: #efefef;">
         <a class="navbar-brand font-weight-bold" href="./index.php"><img src="./img/logo.png" class="img-fluid" style="width: 190px; height: 5x0px;"></a>
@@ -54,18 +41,10 @@ include_once('header.php');
                     </div>
                 </li>
             </ul>
-            <div class="col-md-3">
-                <input type="text" id="search" placeholder="Enter Student name..." autocomplete="off" class="form-control input-lg" />
-            </div>
-            <!-- <form action="action.php" method="post" class="form-inline">
-                <input class="form-control mx-1" type="text" name="search" id="search" placeholder="Buscar...">
-                <input class="btn btn-info" type="submit" name="submit" value="Buscar">
-            </form> -->
+            <form class="form-inline" action="action.php" method="GET">
+                <input class="form-control mx-1" type="text" placeholder="Buscar..." name="search" aria-label="Search" required>
+                <input class="btn btn-primary" type="submit" value="Buscar" name="submit">
+            </form>
         </div>
     </nav>
-    <!-- <div class="col-md-3" style="position:relative; margin-top: 69px; margin-left: 1023px;">
-        <div class="list-group" id="show-list">
-            
-        </div>
-    </div> -->
 </header>

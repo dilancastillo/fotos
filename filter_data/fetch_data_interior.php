@@ -2,7 +2,7 @@
 
 //fetch_data.php
 
-include('../conexion.php');
+include('../header.php');
 
 if (isset($_POST["action"])) {
     $query = "
@@ -35,7 +35,7 @@ if (isset($_POST["action"])) {
     if ($total_row > 0) {
         foreach ($result as $row) {
             $output .= '
-                <div class="uk-width-1-2" uk-grid uk-lightbox="animation: slide">
+                <div class="uk uk-width-1-2" uk-grid uk-lightbox="animation: slide">
                     <div>
                         <a class="uk-inline" href="img/banner/' . $row['url_image'] . '" data-caption="' . $row['titulo'] . '">
                             <img src="img/banner/' . $row['url_image'] . '">

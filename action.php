@@ -2,43 +2,61 @@
 include_once('header.php');
 include_once('search.php');
 
-//ANTIGUO BUSCADOR
-// if (isset($_POST['query'])) {
-//     $inpText = $_POST['query'];
-//     $query = "SELECT titulo FROM bano WHERE titulo LIKE '%$inpText%'";
+$button = $_GET['submit'];
+$search = $_GET['search'];
 
-//     $result = $con->query($query);
-//     if ($result->num_rows>0) {
-//         while ($row=$result->fetch_assoc()) {
-//             echo "<a href='' class='list-group-item list-group-item-action'>".$row['titulo']."</a>";
-//         }
-//     } else {
-//         echo "<p class='list-group-item border-1'>Datos no encontrados</p>";
-//     }
-// }
+if (!$button)
+    echo "No enviaste una palabra clave";
+else {
+    if (strlen($search) <= 1)
+        echo "Término de búsqueda demasiado corto";
+    else {
+        echo "<h4 class='ml-5'>Buscó <b>$search</b></h4>
+        <hr size = '2'>";
+        $search_exploded = explode(" ", $search);
+        $x = 0;
+        $construct = "";
+        foreach ($search_exploded as $search_each) {
+            $x++;
 
-if (isset($_GET["term"])) {
-    $query = "
-    SELECT * FROM bano 
-    WHERE titulo LIKE '%".$_GET["term"]."%'
-    ORDER BY titulo ASC";
-    $statement = $conn->prepare($query);
-    $statement->execute();
-    $result = $statement->fetchAll();
-    $total_row = $statement->rowCount();
-    $output = array();
-    if ($total_row > 0) { 
-    foreach ($result as $row) {
-        $temp_array = array();
-        $temp_array['value'] = $row['titulo'];
-        $temp_array['label'] = '<img src="img/banner/'.$row['url_image'].'" width="70" />&nbsp;&nbsp;&nbsp;'.$row['titulo'].'';
-        $output[] = $temp_array;
+            if ($x == 1)
+                $construct .= "titulo LIKE '%$search_each%'";
+            else
+                $construct .= "AND titulo LIKE '%$search_each%'";
+        }
+        $construct = "SELECT * FROM bano WHERE $construct UNION SELECT * FROM cocina WHERE $construct UNION SELECT * FROM exterior WHERE $construct UNION SELECT * FROM interior WHERE $construct";
+        $run = mysqli_query($con, $construct);
+
+        $foundnum = mysqli_num_rows($run);
+        if (!$run) {
+            echo mysqli_error($con);
+        }
+
+        if ($foundnum == 0)
+            echo "<h4 class='ml-5'>Lo siento, no hay resultados coincidentes para <b>$search</b>.</h4>";
+        else {
+            echo "<h4 class='ml-5'><p>$foundnum resultados encontrados!</p></h4>";
+?>
+            <div class="container-fluid">
+                <div class="row ml-4"><?php
+                                    while ($runrows = mysqli_fetch_assoc($run)) {
+                                        $title = $runrows['titulo'];
+                                        $url_image = $runrows['url_image'];
+                                        echo "
+                    <div class='uk uk-width-1-2' uk-grid uk-lightbox='animation: slide'>
+                    <div>
+                        <a class='uk-inline' href='img/banner/$url_image' data-caption='$title'>
+                        <img src='img/banner/$url_image'>
+                        </a>
+                    </div>
+                    </div>";
+                                    }
+                                    ?></div>
+            </div>
+<?php
+        }
     }
 }
-else {
-    $output['value'] = '';
-    $output['label'] = 'Datos no encontrados';
-}
-    echo json_encode($output);
-}
+
+include('footer.php');
 ?>

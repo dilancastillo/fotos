@@ -15,7 +15,7 @@ include_once('search.php');
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="list-group mb-5">
                     <h3>Marca</h3>
                     <?php
@@ -73,7 +73,7 @@ include_once('search.php');
                 </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col">
                 <br />
                 <div class="row filter_data">
                 </div>

@@ -12,10 +12,12 @@ include_once('search.php');
     </div>
 </section>
 
+
+
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="list-group mb-5">
                     <h3>Marca</h3>
                     <?php
