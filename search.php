@@ -42,9 +42,41 @@ include_once('header.php');
                 </li>
             </ul>
             <form class="form-inline" action="action.php" method="GET">
-                <input class="form-control mx-1" type="text" placeholder="Buscar..." name="search" aria-label="Search" required>
+                <input class="form-control mx-1" type="text" placeholder="Buscar..." name="search" aria-label="Search" autocomplete="off" onkeyup="autocompletar()" required>
                 <input class="btn btn-primary" type="submit" value="Buscar" name="submit">
+                <ul id="lista_id"></ul>
             </form>
         </div>
     </nav>
 </header>
+
+<!-- <script>
+// Función autocompletar
+function autocompletar() {
+	var minimo_letras = 0; // minimo letras visibles en el autocompletar
+	var palabra = $('#search').val();
+	//Contamos el valor del input mediante una condicional
+	if (palabra.length >= minimo_letras) {
+		$.ajax({
+			url: 'mostrar.php',
+			type: 'POST',
+			data: {palabra:palabra},
+			success:function(data){
+				$('#lista_id').show();
+				$('#lista_id').html(data);
+			}
+		});
+	} else {
+		//ocultamos la lista
+		$('#lista_id').hide();
+	}
+}
+
+// Funcion Mostrar valores
+function set_item(opciones) {
+	// Cambiar el valor del formulario input
+	$('#search').val(opciones);
+	// ocultar lista de proposiciones
+	$('#lista_id').hide();
+}
+</script> -->
