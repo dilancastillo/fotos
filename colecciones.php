@@ -56,7 +56,7 @@ while ($row = $sel->fetch_assoc()) {
                                     <p class="card-text"><?php echo $val['descripcion'] ?></p>
                                     <!-- Button -->
                                     <a onclick="openModelPDF('<?php echo $val['url'] ?>')" class="btn btn-collection mb-2">Ver colección en modal</a>
-                                    <a target="_black" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/php_fotos/' . $val['url']; ?>" class="btn btn-collection">Ver colección en página</a>
+                                    <a target="_black" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fotos/' . $val['url']; ?>" class="btn btn-collection">Ver colección en página</a>
                                 </div>
                             </div>
                             <!-- Card Regular -->
@@ -154,6 +154,6 @@ include_once('footer.php');
 
     function openModelPDF(url) {
         $('#modalPdf').modal('show');
-        $('#iframePDF').attr('src', '<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/php_fotos/'; ?>' + url);
+        $('#iframePDF').attr('src', '<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fotos/'; ?>' + url);
     }
 </script>
