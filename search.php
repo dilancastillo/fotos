@@ -42,7 +42,7 @@ include_once('header.php');
                 </li>
             </ul>
             <form class="form-inline" action="action.php" method="GET">
-                <input class="form-control mx-1" type="text" placeholder="Buscar..." name="search" aria-label="Search" autocomplete="off" onkeyup="autocompletar()" required>
+                <input class="form-control mx-1" style="width: 320px;" type="text" placeholder="Buscar..." name="search" aria-label="Search" autocomplete="off" onkeyup="autocompletar()" required>
                 <input class="btn btn-primary" type="submit" value="Buscar" name="submit">
                 <ul id="lista_id"></ul>
             </form>
@@ -50,7 +50,7 @@ include_once('header.php');
     </nav>
 </header>
 
-<!-- <script>
+<script>
 // Función autocompletar
 function autocompletar() {
 	var minimo_letras = 0; // minimo letras visibles en el autocompletar
@@ -79,4 +79,4 @@ function set_item(opciones) {
 	// ocultar lista de proposiciones
 	$('#lista_id').hide();
 }
-</script> -->
+</script>

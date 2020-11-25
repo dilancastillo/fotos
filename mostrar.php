@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 include_once('header.php');
 
 $keyword = '%'.$_POST['palabra'].'%';
@@ -13,4 +13,4 @@ foreach ($lista as $milista) {
 	// Aquì, agregaremos opciones
     echo '<li onclick="set_item(\''.str_replace("'", "\'", $milista['titulo']).'\')">'.$titulo.'</li>';
 }
-?> -->
+?>
