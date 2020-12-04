@@ -14,6 +14,15 @@ include("conexion.php");
     <link rel="stylesheet" href="./admin/css/all.min.css">
     <link rel="stylesheet" href="./admin/css/jquery-ui.css">
     <link rel="stylesheet" href="./admin/css/style.css">
+    
+    <script src="./admin/js/jquery.min.js"></script>
+    <script src="./admin/js/bootstrap.min.js"></script>
+    <script src="./admin/js/popper.min.js"></script>
+    <!-- <script src="./admin/js/mdb.min.js"></script> -->
+    <script src="./admin/js/all.min.js"></script>
+    <script src="./admin/js/uikit.min.js"></script>
+    <script src="./admin/js/uikit-icons.min.js"></script>
+    <script src="./admin/js/jquery-ui.js"></script>
     <style>
         * {
             font-weight: 300;

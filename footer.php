@@ -39,15 +39,6 @@
                 align-items: center;
             }
         </style>
-
-        <script src="./admin/js/jquery.min.js"></script>
-        <script src="./admin/js/bootstrap.min.js"></script>
-        <script src="./admin/js/popper.min.js"></script>
-        <!-- <script src="./admin/js/mdb.min.js"></script> -->
-        <script src="./admin/js/all.min.js"></script>
-        <script src="./admin/js/uikit.min.js"></script>
-        <script src="./admin/js/uikit-icons.min.js"></script>
-        <script src="./admin/js/jquery-ui.js"></script>
         </body>
 
         </html>

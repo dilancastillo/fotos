@@ -96,6 +96,10 @@ while ($row = $sel->fetch_assoc()) {
                         <label data-error="wrong" data-success="right" for="descripcion">Archivo</label>
                         <input type="file" class="form-control validate" id="file" name="file">
                     </div>
+                    <div class="form-group mb-4">
+                        <label data-error="wrong" data-success="right" for="descripcion">Imagen</label>
+                        <input type="file" class="form-control validate" id="file" name="file">
+                    </div>
                 </form>
             </div>
             <div class="modal-footer d-flex justify-content-center">
