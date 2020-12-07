@@ -40,7 +40,7 @@
                         <a class="nav-link pl-3" href="./cocinas.php">Cocinas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-3" href="./colecciones.php">Catálogos</a>
+                        <a class="nav-link pl-3" href="./catalogos.php">Catálogos</a>
                     </li>
                 </ul>
             </div>

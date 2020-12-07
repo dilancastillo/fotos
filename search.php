@@ -27,7 +27,7 @@ include_once('header.php');
                     <a class="nav-link" style="color: #000000;" href="./cocinas.php">Cocinas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: #000000;" href="./colecciones.php">Catálogos</a>
+                    <a class="nav-link" style="color: #000000;" href="./catalogos.php">Catálogos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: #000000;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
