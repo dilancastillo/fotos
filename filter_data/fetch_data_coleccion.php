@@ -6,7 +6,7 @@ include('../header.php');
 if (isset($_POST["action"])) {
     $query = "
 		SELECT * FROM coleccion WHERE estado = '1'
-	" ;
+	";
     if (isset($_POST["marca"])) {
         $brand_filter = implode("','", $_POST["marca"]);
         $query .= "
@@ -22,11 +22,12 @@ if (isset($_POST["action"])) {
     if ($total_row > 0) {
         foreach ($result as $row) {
             $output .= '
-                    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-                    <h3 class="uk-card-title">' . $row['titulo'] . '</h3>
-                   <p>' . $row['descripcion'] . '</p>
-                   <a class="btn" style="background-color: #E9630B !important; color: #ffffff;" target="_black" href="' . $row['url'] . '">Ver catálogo</a>
-                    </div>
+                    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m mb-5">
+                            <img src="' . $row['url_image'] . '" style="width: 120%; height: 310px;">
+                            <h3 class="uk-card-title text-center">' . $row['titulo'] . '</h3>
+                            <p class="text-center">' . $row['descripcion'] . '</p>
+                                <a class="uk-align-center btn" style="width:120px; background-color: #E9630B !important; color: #ffffff;" target="_black" href="' . $row['url'] . '">Ver catálogo</a>
+                                </div>
                 ';
         }
     } else {

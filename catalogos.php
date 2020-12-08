@@ -22,7 +22,7 @@ include_once('search.php');
                     <h3>Marca</h3>
                     <?php
                     $nums = 1;
-                    $query = "SELECT DISTINCT(marca) FROM coleccion WHERE estado = '1' ORDER BY id ASC";
+                    $query = "SELECT DISTINCT(marca) FROM coleccion WHERE estado = '1' ORDER BY marca ASC";
                     $statement = $conn->prepare($query);
                     $statement->execute();
                     $result = $statement->fetchAll();
