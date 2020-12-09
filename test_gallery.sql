@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2020 a las 15:00:40
+-- Tiempo de generación: 09-12-2020 a las 16:07:16
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -359,6 +359,7 @@ CREATE TABLE `coleccion` (
   `tipo` varchar(150) NOT NULL,
   `url_image` varchar(255) NOT NULL,
   `marca` varchar(50) NOT NULL,
+  `categoria` varchar(50) NOT NULL,
   `estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -366,45 +367,49 @@ CREATE TABLE `coleccion` (
 -- Volcado de datos para la tabla `coleccion`
 --
 
-INSERT INTO `coleccion` (`id`, `titulo`, `descripcion`, `url`, `tipo`, `url_image`, `marca`, `estado`) VALUES
-(10, 'Lanzamientos Corona 2020 - 2021', 'Catálogo de productos 2020 - 2021', 'colecciones_pdf/PRESENTACION LANZAMIENTO 2020 - 2021.pdf', '', 'colecciones_pdf/images//PRESENTACION LANZAMIENTO 2020 - 2021.png', 'corona', 1),
-(11, 'Colecci&oacute;n Avenir - Alfa', 'Cat&aacute;logo de productos -  2020, 2021', 'colecciones_pdf/catlogoprodalfa20bajapdf.pdf', '', 'colecciones_pdf/images/catlogoprodalfa20bajapdf.png', 'alfa', 1),
-(12, 'Colecci&oacute;n Expresiones - Corona', 'Pisos, paredes, decorados, materiales y pinturas - 2020', 'colecciones_pdf/corona-expresiones-2020-1pdf.pdf', '', 'colecciones_pdf/images/corona-expresiones-2020-1pdf.png', 'corona', 1),
-(13, 'Colecci&oacute;n Or&iacute;genes - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-origenes-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-origenes-2019-1pdf.png', 'corona', 1),
-(20, 'Colecci&oacute;n Cevisama - Estilker', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/esnews20ed1pdf.pdf', '', 'colecciones_pdf/images/esnews20ed1pdf.png', 'estilker', 1),
-(21, 'Colecci&oacute;n Paredes Lienzo - Corona', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/presentacion-coleccin-paredes-lienzo-2020pdf.pdf', '', 'colecciones_pdf/images/presentacion-coleccin-paredes-lienzo-2020pdf.png', 'corona', 1),
-(22, 'Cat&aacute;logo de decorados Estilker', 'Cat&aacute;logo de productos 2020', 'colecciones_pdf/estilker-2020pdf.pdf', '', 'colecciones_pdf/images/estilker-2020pdf.png', 'estilker', 1),
-(23, 'Colecci&oacute;n Cer&aacute;micas - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/ceramicas-oct26pdf.pdf', '', 'colecciones_pdf/images/ceramicas-oct26pdf.png', 'alfa', 1),
-(24, 'Colecci&oacute;n Evoka - Alfa', 'Cat&aacute;logo de productos - 2019, 2020', 'colecciones_pdf/catalogoevokapdf.pdf', '', 'colecciones_pdf/images/catalogoevokapdf.png', 'alfa', 1),
-(25, 'Cat&aacute;logo compatibilidad - Corona', 'Lavamanos y grifer&iacute;as - 2020', 'colecciones_pdf/catalogo-compatiblidad-lvm-gf-sep-2020pdf.pdf', '', 'colecciones_pdf/images/catalogo-compatiblidad-lvm-gf-sep-2020pdf.png', 'corona', 1),
-(26, 'Cat&aacute;logo de pisos y paredes - Corona', 'Piso porcelanato -  2020', 'colecciones_pdf/corona-catalogo-porcelanto-2020-v2pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-porcelanto-2020-v2pdf.png', 'corona', 1),
-(29, 'Cat&aacute;logo de ba&ntilde;os residenciales - Corona', 'Ba&ntilde;os residenciales- 2018', 'colecciones_pdf/corona-banos-2018-1pdf.pdf', '', 'colecciones_pdf/images/corona-banos-2018-1pdf.png', 'corona', 1),
-(30, 'Cat&aacute;logo de estaciones de lavado - Corona', 'Estaciones de lavado de manos para obras e instituciones', 'colecciones_pdf/corona-catalogo-estaciones-de-lavado-v4pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-estaciones-de-lavado-v4pdf.png', 'corona', 1),
-(32, 'Plantillas Or&iacute;genes - Corona', 'Presentaci&oacute;n virtual de ambientes - 2019', 'colecciones_pdf/plantillas-origenes-2019pdf.pdf', '', 'colecciones_pdf/images/plantillas-origenes-2019pdf.png', 'corona', 1),
-(33, 'Cat&aacute;logo de cocinas y &aacute;reas de servicio - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-cocinas-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-cocinas-2019-1pdf.png', 'corona', 1),
-(34, 'Libro de obras - Alfa', 'Proyectos arquitect&oacute;nicos - 2020', 'colecciones_pdf/libro-de-obras-alfapdf.pdf', '', 'colecciones_pdf/images/libro-de-obras-alfapdf.png', 'alfa', 1),
-(35, 'Colecci&oacute;n de ba&ntilde;os y cocinas - Corona', 'Lanzamiento de ba&ntilde;os y cocinas - 2019', 'colecciones_pdf/corona-banos-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-banos-2019-1pdf.png', 'corona', 1),
-(36, 'Colecci&oacute;n de pisos y paredes - Corona', 'Porcelanato - 2019', 'colecciones_pdf/corona-porcelanatos-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-porcelanatos-2019-1pdf.png', 'corona', 1),
-(37, 'Cat&aacute;logo de revestimientos -  Corona', 'Pisos, paredes y decorados - 2019', 'colecciones_pdf/corona-catalogo-pisos-paredes-decorados-portafolio-completo-2019pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-pisos-paredes-decorados-portafolio-completo-2019pdf.png', 'corona', 1),
-(38, 'Colecci&oacute;n Or&iacute;genes - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-catalogo-origenes-2019pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-origenes-2019pdf.png', 'corona', 1),
-(39, 'Colecci&oacute;n Expresiones - Corona', 'Pisos, paredes, decorados, materiales y pinturas - 2019', 'colecciones_pdf/corona-expresiones-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-expresiones-2019-1pdf.png', 'corona', 1),
-(40, 'Nueva Colecci&oacute;n Murales - Corona', 'Presentación de septiembre - decorados', 'colecciones_pdf/presentacin-intro-septiembre-decoradospdf.pdf', '', 'colecciones_pdf/images/presentacin-intro-septiembre-decoradospdf.png', 'corona', 1),
-(41, 'Cat&aacute;logo de ba&ntilde;os institucional - Corona', 'Sanitarios, lavamanos, grifer&iacute;as y complementos - 2020', 'colecciones_pdf/corona-catalogo-institucional-2020pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-institucional-2020pdf.png', 'corona', 1),
-(42, 'Decorados - Corona', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/intro-decorados-detallista-2020pdf.pdf', '', 'colecciones_pdf/images/intro-decorados-detallista-2020pdf.png', 'corona', 1),
-(43, 'Gres - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/grespdf.pdf', '', 'colecciones_pdf/images/grespdf.png', 'alfa', 1),
-(44, 'Cat&aacute;logo de pinturas - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/afcatalogopinturas21-08-20pdf.pdf', '', 'colecciones_pdf/images/afcatalogopinturas21-08-20pdf.png', 'alfa', 1),
-(45, 'Productos institucionales - Corona', 'Sanitarios, lavamanos, grifer&iacute;as, pisos, paredes, pinturas y complementos - 2020', 'colecciones_pdf/corona-brochure-institucional-2020pdf.pdf', '', 'colecciones_pdf/images/corona-brochure-institucional-2020pdf.png', 'corona', 1),
-(46, 'Cat&aacute;logo institucional - Corona', 'Pisos, paredes, pinturas y materiales de construcci&oacute;n', 'colecciones_pdf/corona-catalogo-institucional-revestimientos-materiales-pinturas-v1pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-institucional-revestimientos-materiales-pinturas-v1pdf.png', 'corona', 1),
-(47, 'Cat&aacute;logo General - Cer&aacute;mica Italia', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/generalpdf.pdf', '', 'colecciones_pdf/images/generalpdf.png', 'italia', 1),
-(48, 'Cubierta Colonial', 'Ficha t&eacute;cnica de Cubierta Colonial', 'colecciones_pdf/ficha-tecnica-colonialpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-colonialpdf.png', 'mathiesen', 1),
-(49, 'L&aacute;mina Alveolar', 'Ficha t&eacute;cnica de L&aacute;mina Alveolar', 'colecciones_pdf/ficha-tecnica-alveolarpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-alveolarpdf.png', 'mathiesen', 1),
-(50, 'Teja de policarbonato', 'Ficha t&eacute;cnica de teja de policarbonato ', 'colecciones_pdf/ficha-tecnica-policarbonatopdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-policarbonatopdf.png', 'mathiesen', 1),
-(51, 'Cubierta Thermo Steel Maxter', 'Ficha t&eacute;cnica de Cubierta Thermo Steel Maxter', 'colecciones_pdf/ficha-tcnica-thermo-steel-maxterpdf.pdf', '', 'colecciones_pdf/images/ficha-tcnica-thermo-steel-maxterpdf.png', 'mathiesen', 1),
-(52, 'Cubierta Extra Forte', 'Ficha t&eacute;cnica de cubierta Extra Forte', 'colecciones_pdf/ficha-tecnica-extra-fortepdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-extra-fortepdf.png', 'mathiesen', 1),
-(53, 'Gu&iacute;a de transporte, almacenaje e instalaci&oacute;n de cubiertas', 'Transporte, almacenaje e instalaci&oacute;n de cubiertasUPVC', 'colecciones_pdf/gua-de-transporte-almacenaje-e-instalacin-cubiertas-upvcpdf.pdf', '', 'colecciones_pdf/images/gua-de-transporte-almacenaje-e-instalacin-cubiertas-upvcpdf.png', 'mathiesen', 1),
-(54, 'Cubierta UPVC P7', 'Ficha t&eacute;cnica de Cubierta UPVC P7', 'colecciones_pdf/ficha-tecnica-p7pdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-p7pdf.png', 'mathiesen', 1),
-(55, 'Cubierta Forte, Cubrim&aacute;s y Plus', 'Ficha t&eacute;cnica de Cubiertas Forte, Cubrim&aacute;s y Plus', 'colecciones_pdf/ficha-tecnica-cubrimas-y-plus-def-brpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-cubrimas-y-plus-def-brpdf.png', 'mathiesen', 1),
-(56, 'Cubierta trapezoidal ', 'Ficha t&eacute;cnica de Cubierta trapezoidal', 'colecciones_pdf/cubierta-trapezoidalpdf.pdf', '', 'colecciones_pdf/images/cubierta-trapezoidalpdf.png', 'acerfo', 1);
+INSERT INTO `coleccion` (`id`, `titulo`, `descripcion`, `url`, `tipo`, `url_image`, `marca`, `categoria`, `estado`) VALUES
+(10, 'Lanzamientos Corona 2020 - 2021', 'Catálogo de productos 2020 - 2021', 'colecciones_pdf/PRESENTACION LANZAMIENTO 2020 - 2021.pdf', '', 'colecciones_pdf/images//PRESENTACION LANZAMIENTO 2020 - 2021.png', 'corona', '', 1),
+(11, 'Colecci&oacute;n Avenir - Alfa', 'Cat&aacute;logo de productos -  2020, 2021', 'colecciones_pdf/catlogoprodalfa20bajapdf.pdf', '', 'colecciones_pdf/images/catlogoprodalfa20bajapdf.png', 'alfa', '', 1),
+(12, 'Colecci&oacute;n Expresiones - Corona', 'Pisos, paredes, decorados, materiales y pinturas - 2020', 'colecciones_pdf/corona-expresiones-2020-1pdf.pdf', '', 'colecciones_pdf/images/corona-expresiones-2020-1pdf.png', 'corona', '', 1),
+(13, 'Colecci&oacute;n Or&iacute;genes - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-origenes-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-origenes-2019-1pdf.png', 'corona', '', 1),
+(20, 'Colecci&oacute;n Cevisama - Estilker', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/esnews20ed1pdf.pdf', '', 'colecciones_pdf/images/esnews20ed1pdf.png', 'estilker', '', 1),
+(21, 'Colecci&oacute;n Paredes Lienzo - Corona', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/presentacion-coleccin-paredes-lienzo-2020pdf.pdf', '', 'colecciones_pdf/images/presentacion-coleccin-paredes-lienzo-2020pdf.png', 'corona', '', 1),
+(22, 'Cat&aacute;logo de decorados Estilker', 'Cat&aacute;logo de productos 2020', 'colecciones_pdf/estilker-2020pdf.pdf', '', 'colecciones_pdf/images/estilker-2020pdf.png', 'estilker', '', 1),
+(23, 'Colecci&oacute;n Cer&aacute;micas - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/ceramicas-oct26pdf.pdf', '', 'colecciones_pdf/images/ceramicas-oct26pdf.png', 'alfa', '', 1),
+(24, 'Colecci&oacute;n Evoka - Alfa', 'Cat&aacute;logo de productos - 2019, 2020', 'colecciones_pdf/catalogoevokapdf.pdf', '', 'colecciones_pdf/images/catalogoevokapdf.png', 'alfa', '', 1),
+(25, 'Cat&aacute;logo compatibilidad - Corona', 'Lavamanos y grifer&iacute;as - 2020', 'colecciones_pdf/catalogo-compatiblidad-lvm-gf-sep-2020pdf.pdf', '', 'colecciones_pdf/images/catalogo-compatiblidad-lvm-gf-sep-2020pdf.png', 'corona', '', 1),
+(26, 'Cat&aacute;logo de pisos y paredes - Corona', 'Piso porcelanato -  2020', 'colecciones_pdf/corona-catalogo-porcelanto-2020-v2pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-porcelanto-2020-v2pdf.png', 'corona', '', 1),
+(28, 'Teja Sevillana', 'Cubiertas de fibrocemento Eternit', 'colecciones_pdf/CARTILLA-TEJA-SEVILLANA.pdf', '', 'colecciones_pdf/images/CARTILLA-TEJA-SEVILLANA.png', 'eternit', 'tejas', 1),
+(29, 'Cat&aacute;logo de ba&ntilde;os residenciales - Corona', 'Ba&ntilde;os residenciales- 2018', 'colecciones_pdf/corona-banos-2018-1pdf.pdf', '', 'colecciones_pdf/images/corona-banos-2018-1pdf.png', 'corona', '', 1),
+(30, 'Cat&aacute;logo de estaciones de lavado - Corona', 'Estaciones de lavado de manos para obras e instituciones', 'colecciones_pdf/corona-catalogo-estaciones-de-lavado-v4pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-estaciones-de-lavado-v4pdf.png', 'corona', 'institucional', 1),
+(31, 'Teja Ondulada Perfil 7', 'Cubiertas de fibrocemento Eternit', 'colecciones_pdf/CARTILLA-TEJA-P7.pdf', '', 'colecciones_pdf/images/CARTILLA-TEJA-P7.png', 'eternit', 'tejas', 1),
+(32, 'Plantillas Or&iacute;genes - Corona', 'Presentaci&oacute;n virtual de ambientes - 2019', 'colecciones_pdf/plantillas-origenes-2019pdf.pdf', '', 'colecciones_pdf/images/plantillas-origenes-2019pdf.png', 'corona', '', 1),
+(33, 'Cat&aacute;logo de cocinas y &aacute;reas de servicio - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-cocinas-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-cocinas-2019-1pdf.png', 'corona', '', 1),
+(34, 'Libro de obras - Alfa', 'Proyectos arquitect&oacute;nicos - 2020', 'colecciones_pdf/libro-de-obras-alfapdf.pdf', '', 'colecciones_pdf/images/libro-de-obras-alfapdf.png', 'alfa', '', 1),
+(35, 'Colecci&oacute;n de ba&ntilde;os y cocinas - Corona', 'Lanzamiento de ba&ntilde;os y cocinas - 2019', 'colecciones_pdf/corona-banos-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-banos-2019-1pdf.png', 'corona', '', 1),
+(36, 'Colecci&oacute;n de pisos y paredes - Corona', 'Porcelanato - 2019', 'colecciones_pdf/corona-porcelanatos-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-porcelanatos-2019-1pdf.png', 'corona', '', 1),
+(37, 'Cat&aacute;logo de revestimientos -  Corona', 'Pisos, paredes y decorados - 2019', 'colecciones_pdf/corona-catalogo-pisos-paredes-decorados-portafolio-completo-2019pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-pisos-paredes-decorados-portafolio-completo-2019pdf.png', 'corona', '', 1),
+(38, 'Colecci&oacute;n Or&iacute;genes - Corona', 'Cat&aacute;logo de productos - 2019', 'colecciones_pdf/corona-catalogo-origenes-2019pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-origenes-2019pdf.png', 'corona', '', 1),
+(39, 'Colecci&oacute;n Expresiones - Corona', 'Pisos, paredes, decorados, materiales y pinturas - 2019', 'colecciones_pdf/corona-expresiones-2019-1pdf.pdf', '', 'colecciones_pdf/images/corona-expresiones-2019-1pdf.png', 'corona', '', 1),
+(40, 'Nueva Colecci&oacute;n Murales - Corona', 'Presentación de septiembre - decorados', 'colecciones_pdf/presentacin-intro-septiembre-decoradospdf.pdf', '', 'colecciones_pdf/images/presentacin-intro-septiembre-decoradospdf.png', 'corona', '', 1),
+(41, 'Cat&aacute;logo de ba&ntilde;os institucional - Corona', 'Sanitarios, lavamanos, grifer&iacute;as y complementos - 2020', 'colecciones_pdf/corona-catalogo-institucional-2020pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-institucional-2020pdf.png', 'corona', 'institucional', 1),
+(42, 'Decorados - Corona', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/intro-decorados-detallista-2020pdf.pdf', '', 'colecciones_pdf/images/intro-decorados-detallista-2020pdf.png', 'corona', '', 1),
+(43, 'Gres - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/grespdf.pdf', '', 'colecciones_pdf/images/grespdf.png', 'alfa', '', 1),
+(44, 'Cat&aacute;logo de pinturas - Alfa', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/afcatalogopinturas21-08-20pdf.pdf', '', 'colecciones_pdf/images/afcatalogopinturas21-08-20pdf.png', 'alfa', 'pinturas', 1),
+(45, 'Productos institucionales - Corona', 'Sanitarios, lavamanos, grifer&iacute;as, pisos, paredes, pinturas y complementos - 2020', 'colecciones_pdf/corona-brochure-institucional-2020pdf.pdf', '', 'colecciones_pdf/images/corona-brochure-institucional-2020pdf.png', 'corona', 'institucional', 1),
+(46, 'Cat&aacute;logo institucional - Corona', 'Pisos, paredes, pinturas y materiales de construcci&oacute;n', 'colecciones_pdf/corona-catalogo-institucional-revestimientos-materiales-pinturas-v1pdf.pdf', '', 'colecciones_pdf/images/corona-catalogo-institucional-revestimientos-materiales-pinturas-v1pdf.png', 'corona', 'institucional', 1),
+(47, 'Cat&aacute;logo General - Cer&aacute;mica Italia', 'Cat&aacute;logo de productos - 2020', 'colecciones_pdf/generalpdf.pdf', '', 'colecciones_pdf/images/generalpdf.png', 'italia', '', 1),
+(48, 'Cubierta Colonial', 'Ficha t&eacute;cnica de Cubierta Colonial', 'colecciones_pdf/ficha-tecnica-colonialpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-colonialpdf.png', 'mathiesen', 'tejas', 1),
+(49, 'L&aacute;mina Alveolar', 'Ficha t&eacute;cnica de L&aacute;mina Alveolar', 'colecciones_pdf/ficha-tecnica-alveolarpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-alveolarpdf.png', 'mathiesen', 'tejas', 1),
+(50, 'Teja de policarbonato', 'Ficha t&eacute;cnica de teja de policarbonato ', 'colecciones_pdf/ficha-tecnica-policarbonatopdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-policarbonatopdf.png', 'mathiesen', 'tejas', 1),
+(51, 'Cubierta Thermo Steel Maxter', 'Ficha t&eacute;cnica de Cubierta Thermo Steel Maxter', 'colecciones_pdf/ficha-tcnica-thermo-steel-maxterpdf.pdf', '', 'colecciones_pdf/images/ficha-tcnica-thermo-steel-maxterpdf.png', 'mathiesen', 'tejas', 1),
+(52, 'Cubierta Extra Forte', 'Ficha t&eacute;cnica de cubierta Extra Forte', 'colecciones_pdf/ficha-tecnica-extra-fortepdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-extra-fortepdf.png', 'mathiesen', 'tejas', 1),
+(53, 'Gu&iacute;a de transporte, almacenaje e instalaci&oacute;n de cubiertas', 'Transporte, almacenaje e instalaci&oacute;n de cubiertasUPVC', 'colecciones_pdf/gua-de-transporte-almacenaje-e-instalacin-cubiertas-upvcpdf.pdf', '', 'colecciones_pdf/images/gua-de-transporte-almacenaje-e-instalacin-cubiertas-upvcpdf.png', 'mathiesen', 'tejas', 1),
+(54, 'Cubierta UPVC P7', 'Ficha t&eacute;cnica de Cubierta UPVC P7', 'colecciones_pdf/ficha-tecnica-p7pdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-p7pdf.png', 'mathiesen', 'tejas', 1),
+(55, 'Cubierta Forte, Cubrim&aacute;s y Plus', 'Ficha t&eacute;cnica de Cubiertas Forte, Cubrim&aacute;s y Plus', 'colecciones_pdf/ficha-tecnica-cubrimas-y-plus-def-brpdf.pdf', '', 'colecciones_pdf/images/ficha-tecnica-cubrimas-y-plus-def-brpdf.png', 'mathiesen', 'tejas', 1),
+(56, 'Cubierta trapezoidal ', 'Ficha t&eacute;cnica de Cubierta trapezoidal', 'colecciones_pdf/cubierta-trapezoidalpdf.pdf', '', 'colecciones_pdf/images/cubierta-trapezoidalpdf.png', 'acerfo', 'tejas', 1),
+(57, 'Barras y rollos corrugados GG Diaco', 'Ficha técnica de producto GG Diaco', 'colecciones_pdf/A_FICHA-TECNICA-BARRAS-Y-ROLLOS-CORRUGADOS.pdf', '', 'colecciones_pdf/images/A_FICHA-TECNICA-BARRAS-Y-ROLLOS-CORRUGADOS.png', 'diaco', 'hierro', 1),
+(58, 'Malla Electrosoldada GG Diaco', 'Ficha técnica de producto', 'colecciones_pdf/A_FICHA-TECNICA-MALLA-ELECTROSOLDADA_2016-1.pdf', '', 'colecciones_pdf/images/A_FICHA-TECNICA-MALLA-ELECTROSOLDADA_2016-1.png', 'diaco', 'hierro', 1);
 
 -- --------------------------------------------------------
 

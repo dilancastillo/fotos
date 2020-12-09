@@ -20,20 +20,41 @@ include_once('search.php');
             <div class="col-md-2">
                 <div class="list-group mb-5">
                     <h3>Marca</h3>
-                    <?php
-                    $nums = 1;
-                    $query = "SELECT DISTINCT(marca) FROM coleccion WHERE estado = '1' ORDER BY marca ASC";
-                    $statement = $conn->prepare($query);
-                    $statement->execute();
-                    $result = $statement->fetchAll();
-                    foreach ($result as $row) {
-                    ?>
-                        <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="common_selector marca" value="<?php echo $row['marca']; ?>"><?php echo $row['marca']; ?></label>
-                        </div>
-                    <?php
-                    }
-                    ?>
+                    <div style="height: 400px; overflow-y: auto; overflow-x: hidden;">
+                        <?php
+                        $nums = 1;
+                        $query = "SELECT DISTINCT(marca) FROM coleccion WHERE estado = '1' ORDER BY marca ASC";
+                        $statement = $conn->prepare($query);
+                        $statement->execute();
+                        $result = $statement->fetchAll();
+                        foreach ($result as $row) {
+                        ?>
+                            <div class="list-group-item checkbox">
+                                <label><input type="checkbox" class="common_selector marca" value="<?php echo $row['marca']; ?>"><?php echo $row['marca']; ?></label>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <div class="list-group mb-5">
+                    <h3>Categoría</h3>
+                    <div style="height: 400px; overflow-y: auto; overflow-x: hidden;">
+                        <?php
+                        $query = "SELECT  DISTINCT(categoria) FROM coleccion WHERE estado = '1' ORDER BY categoria ASC";
+                        $statement = $conn->prepare($query);
+                        $statement->execute();
+                        $result = $statement->fetchAll();
+                        foreach ($result as $row) {
+                        ?>
+                            <div class="list-group-item checkbox">
+                                <label><input type="checkbox" class="common_selector categoria" value="<?php echo $row['categoria']; ?>"><?php echo $row['categoria'] ?></label>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
 
@@ -59,12 +80,14 @@ include_once('footer.php');
             $('.filter_data').html('<div id="loading" style="" ></div>');
             var action = 'fetch_data';
             var marca = get_filter('marca');
+            var categoria = get_filter('categoria');
             $.ajax({
                 url: "filter_data/fetch_data_coleccion.php",
                 method: "POST",
                 data: {
                     action: action,
                     marca: marca,
+                    categoria: categoria,
                 },
                 success: function(data) {
                     $('.filter_data').html(data);

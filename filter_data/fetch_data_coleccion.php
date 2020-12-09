@@ -14,6 +14,13 @@ if (isset($_POST["action"])) {
 		";
     }
 
+    if (isset($_POST["categoria"])) {
+        $category_filter = implode("','", $_POST["categoria"]);
+        $query .= "
+		 AND categoria IN('" . $category_filter . "')
+		";
+    }
+
     $statement = $conn->prepare($query);
     $statement->execute();
     $result = $statement->fetchAll();
